@@ -4,22 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Kaggle Survey 2020 | My notebooks</title>
+<title>Kaggle Survey 2020 (WIP) | My notebooks</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Kaggle Survey 2020" />
+<meta property="og:title" content="Kaggle Survey 2020 (WIP)" />
 <meta name="author" content="Yannick" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="EDA/Plots/…" />
 <meta property="og:description" content="EDA/Plots/…" />
-<link rel="canonical" href="https://yannick42.github.io/notebooks/fastpages/jupyter/eda/2022/04/22/Kaggle_Survey_2020.html" />
-<meta property="og:url" content="https://yannick42.github.io/notebooks/fastpages/jupyter/eda/2022/04/22/Kaggle_Survey_2020.html" />
+<link rel="canonical" href="https://yannick42.github.io/notebooks/eda/2022/04/22/Kaggle_Survey_2020.html" />
+<meta property="og:url" content="https://yannick42.github.io/notebooks/eda/2022/04/22/Kaggle_Survey_2020.html" />
 <meta property="og:site_name" content="My notebooks" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-04-22T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Kaggle Survey 2020" />
+<meta property="twitter:title" content="Kaggle Survey 2020 (WIP)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yannick"},"dateModified":"2022-04-22T00:00:00-05:00","datePublished":"2022-04-22T00:00:00-05:00","description":"EDA/Plots/…","headline":"Kaggle Survey 2020","mainEntityOfPage":{"@type":"WebPage","@id":"https://yannick42.github.io/notebooks/fastpages/jupyter/eda/2022/04/22/Kaggle_Survey_2020.html"},"url":"https://yannick42.github.io/notebooks/fastpages/jupyter/eda/2022/04/22/Kaggle_Survey_2020.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Yannick"},"dateModified":"2022-04-22T00:00:00-05:00","datePublished":"2022-04-22T00:00:00-05:00","description":"EDA/Plots/…","headline":"Kaggle Survey 2020 (WIP)","mainEntityOfPage":{"@type":"WebPage","@id":"https://yannick42.github.io/notebooks/eda/2022/04/22/Kaggle_Survey_2020.html"},"url":"https://yannick42.github.io/notebooks/eda/2022/04/22/Kaggle_Survey_2020.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/notebooks/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yannick42.github.io/notebooks/feed.xml" title="My notebooks" /><link rel="shortcut icon" type="image/x-icon" href="/notebooks/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -74,7 +74,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Kaggle Survey 2020</h1><p class="page-description">EDA/Plots/...</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-04-22T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Survey 2020 (WIP)</h1><p class="page-description">EDA/Plots/...</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-04-22T00:00:00-05:00" itemprop="datePublished">
         Apr 22, 2022
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -82,18 +82,12 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      2 min read
     
 </span></p>
 
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/notebooks/categories/#fastpages">fastpages</a>
-        &nbsp;
-      
-        <a class="category-tags-link" href="/notebooks/categories/#jupyter">jupyter</a>
-        &nbsp;
       
         <a class="category-tags-link" href="/notebooks/categories/#EDA">EDA</a>
         
@@ -150,34 +144,11 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">kaggle</span> <span class="o">--</span><span class="n">upgrade</span>
+<div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">capture</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">kaggle</span> <span class="o">--</span><span class="n">upgrade</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Requirement already satisfied: kaggle in /usr/local/lib/python3.7/dist-packages (1.5.12)
-Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.23.0)
-Requirement already satisfied: six&gt;=1.10 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.15.0)
-Requirement already satisfied: python-dateutil in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.8.2)
-Requirement already satisfied: urllib3 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.24.3)
-Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from kaggle) (2021.10.8)
-Requirement already satisfied: python-slugify in /usr/local/lib/python3.7/dist-packages (from kaggle) (6.1.1)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from kaggle) (4.64.0)
-Requirement already satisfied: text-unidecode&gt;=1.3 in /usr/local/lib/python3.7/dist-packages (from python-slugify-&gt;kaggle) (1.3)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;kaggle) (2.10)
-Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;kaggle) (3.0.4)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -297,25 +268,14 @@ drwxr-xr-x 2 root root     4096 Apr 22 17:33 supplementary_data
 <span class="sd">"""</span>
 
 <span class="c1"># header=None =&gt; skip header... (but no more "Q1", ...)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'kaggle_survey_2020_responses.csv'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">infer_datetime_format</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+  <span class="s1">'kaggle_survey_2020_responses.csv'</span><span class="p">,</span>
+  <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+  <span class="n">infer_datetime_format</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/usr/local/lib/python3.7/dist-packages/IPython/core/interactiveshell.py:2882: DtypeWarning: Columns (0) have mixed types.Specify dtype option on import or set low_memory=False.
-  exec(code_obj, self.user_global_ns, self.user_ns)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -698,7 +658,7 @@ drwxr-xr-x 2 root root     4096 Apr 22 17:33 supplementary_data
 
 
 
-  </div><a class="u-url" href="/notebooks/fastpages/jupyter/eda/2022/04/22/Kaggle_Survey_2020.html" hidden></a>
+  </div><a class="u-url" href="/notebooks/eda/2022/04/22/Kaggle_Survey_2020.html" hidden></a>
 </article>
 
       </div>
