@@ -10,7 +10,7 @@ title: My notebooks
 description: Data Science / ML / Math
 github_username: yannick42
 # you can comment the below line out if your repo name is not different than your baseurl
-#github_repo: "notebooks"
+github_repo: "notebooks"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
@@ -102,7 +102,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: "jekyll/minima@6513ea8b9c1c4909b6aa79926d52a1f7d865c5e7"
+remote_theme: jekyll/minima@6513ea8b9c1c4909b6aa79926d52a1f7d865c5e7
 
 titles_from_headings:
   enabled:     true
