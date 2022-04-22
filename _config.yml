@@ -14,7 +14,7 @@ github_username: yannick42
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-#url: "https://yannick42.github.io/notebooks" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yannick42.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
