@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/notebooks/jupyter/2020/02/20/test.html</loc>
+<loc>https://yannick42.github.io/notebooks/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>/notebooks/about/</loc>
+<loc>https://yannick42.github.io/notebooks/about/</loc>
 </url>
 <url>
-<loc>/notebooks/</loc>
+<loc>https://yannick42.github.io/notebooks/</loc>
 </url>
 <url>
-<loc>/notebooks/search/</loc>
+<loc>https://yannick42.github.io/notebooks/search/</loc>
 </url>
 <url>
-<loc>/notebooks/categories/</loc>
+<loc>https://yannick42.github.io/notebooks/categories/</loc>
 </url>
 </urlset>

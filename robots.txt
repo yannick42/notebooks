@@ -1,1 +1,1 @@
-Sitemap: /notebooks/sitemap.xml
+Sitemap: https://yannick42.github.io/notebooks/sitemap.xml
