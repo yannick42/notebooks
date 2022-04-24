@@ -122,10 +122,15 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Various-charts">Various charts </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Sales'-monthly-evolution-per-sub-category">Sales&#39; monthly evolution per sub-category </a></li>
-<li class="toc-entry toc-h2"><a href="#Boxplot">Boxplot </a></li>
-<li class="toc-entry toc-h2"><a href="#Skewness-&-Kurtosis">Skewness &amp; Kurtosis </a></li>
-<li class="toc-entry toc-h2"><a href="#QQ-Plot-:-test-for-normality">QQ-Plot : test for normality </a></li>
-<li class="toc-entry toc-h2"><a href="#Monthly-Sales">Monthly Sales </a></li>
+<li class="toc-entry toc-h2"><a href="#Sample-distribution">Sample distribution </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Boxplot">Boxplot </a></li>
+<li class="toc-entry toc-h3"><a href="#Skewness-&-Kurtosis">Skewness &amp; Kurtosis </a></li>
+<li class="toc-entry toc-h3"><a href="#IQR-&-Outliers">IQR &amp; Outliers </a></li>
+<li class="toc-entry toc-h3"><a href="#QQ-Plot-:-test-for-normality">QQ-Plot : test for normality </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Monthly-Sales-(heatmaps)">Monthly Sales (heatmaps) </a></li>
 <li class="toc-entry toc-h2"><a href="#by-Day-of-Week">by Day of Week </a></li>
 </ul>
 </li>
@@ -1042,9 +1047,18 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Boxplot">
-<a class="anchor" href="#Boxplot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boxplot<a class="anchor-link" href="#Boxplot"> </a>
+<h2 id="Sample-distribution">
+<a class="anchor" href="#Sample-distribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample distribution<a class="anchor-link" href="#Sample-distribution"> </a>
 </h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Boxplot">
+<a class="anchor" href="#Boxplot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boxplot<a class="anchor-link" href="#Boxplot"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -1115,9 +1129,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Skewness-&amp;-Kurtosis">
+<h3 id="Skewness-&amp;-Kurtosis">
 <a class="anchor" href="#Skewness-&amp;-Kurtosis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skewness &amp; Kurtosis<a class="anchor-link" href="#Skewness-&amp;-Kurtosis"> </a>
-</h2>
+</h3>
 </div>
 </div>
 </div>
@@ -1187,6 +1201,15 @@ kurtosis :  -0.280888535513812
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IQR-&amp;-Outliers">
+<a class="anchor" href="#IQR-&amp;-Outliers" aria-hidden="true"><span class="octicon octicon-link"></span></a>IQR &amp; Outliers<a class="anchor-link" href="#IQR-&amp;-Outliers"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Count the "upper" outliers with the IQR $(Q3-Q1)$ : if greater than $1.5\times IQR$</p>
 
 </div>
@@ -1229,9 +1252,9 @@ kurtosis :  -0.280888535513812
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="QQ-Plot-:-test-for-normality">
+<h3 id="QQ-Plot-:-test-for-normality">
 <a class="anchor" href="#QQ-Plot-:-test-for-normality" aria-hidden="true"><span class="octicon octicon-link"></span></a>QQ-Plot : test for normality<a class="anchor-link" href="#QQ-Plot-:-test-for-normality"> </a>
-</h2>
+</h3>
 </div>
 </div>
 </div>
@@ -1285,8 +1308,8 @@ kurtosis :  -0.280888535513812
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Monthly-Sales">
-<a class="anchor" href="#Monthly-Sales" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monthly Sales<a class="anchor-link" href="#Monthly-Sales"> </a>
+<h2 id="Monthly-Sales-(heatmaps)">
+<a class="anchor" href="#Monthly-Sales-(heatmaps)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monthly Sales (heatmaps)<a class="anchor-link" href="#Monthly-Sales-(heatmaps)"> </a>
 </h2>
 </div>
 </div>
@@ -1889,6 +1912,7 @@ Number of distinct values : 4
 <p><strong>Contingency table</strong> (crosstab) : for bookcases shipping to California (and outside)</p>
 <ul>
 <li>California customer seems to be using a bit less standard shipping on average (?maybe)</li>
+<li><a href="https://en.wikipedia.org/wiki/Contingency_table">https://en.wikipedia.org/wiki/Contingency_table</a></li>
 </ul>
 
 </div>
