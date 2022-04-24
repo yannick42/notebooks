@@ -102,11 +102,13 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#Setup">Setup </a></li>
 <li class="toc-entry toc-h1"><a href="#Load-&-Display-some-data">Load &amp; Display some data </a></li>
+<li class="toc-entry toc-h1"><a href="#Best-sellers">Best sellers </a></li>
 <li class="toc-entry toc-h1"><a href="#Various-charts">Various charts </a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#Sales'-monthly-evolution-per-sub-category">Sales&#39; monthly evolution per sub-category </a></li>
 <li class="toc-entry toc-h2"><a href="#Boxplot">Boxplot </a></li>
 <li class="toc-entry toc-h2"><a href="#Skewness-&-Kurtosis">Skewness &amp; Kurtosis </a></li>
-<li class="toc-entry toc-h2"><a href="#Montly-Sales">Montly Sales </a></li>
+<li class="toc-entry toc-h2"><a href="#Monthly-Sales">Monthly Sales </a></li>
 <li class="toc-entry toc-h2"><a href="#by-Day-of-Week">by Day of Week </a></li>
 </ul>
 </li>
@@ -834,8 +836,8 @@ dtype: int64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Various-charts">
-<a class="anchor" href="#Various-charts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Various charts<a class="anchor-link" href="#Various-charts"> </a>
+<h1 id="Best-sellers">
+<a class="anchor" href="#Best-sellers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Best sellers<a class="anchor-link" href="#Best-sellers"> </a>
 </h1>
 </div>
 </div>
@@ -930,6 +932,24 @@ dtype: int64
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Various-charts">
+<a class="anchor" href="#Various-charts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Various charts<a class="anchor-link" href="#Various-charts"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sales'-monthly-evolution-per-sub-category">
+<a class="anchor" href="#Sales'-monthly-evolution-per-sub-category" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sales' monthly evolution per sub-category<a class="anchor-link" href="#Sales'-monthly-evolution-per-sub-category"> </a>
+</h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1029,7 +1049,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <strong>boxplot</strong> shows the sales (in \$) distribution is skewed. There is a lot of "outliers" (higher amount orders), but the median is \$54</p>
+<p>The <strong>boxplot</strong> shows the sales (in $\$$) distribution is skewed. There is a lot of "outliers" (higher amount orders), but the median is $\$$54</p>
 
 </div>
 </div>
@@ -1099,6 +1119,21 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p><strong>Sales</strong> : (highly) positive skew (tail longer toward the right) and leptokurtic (kurtosis) because it is above 3, pointy, it's an indicator that data has heavy outliers</p>
+</li>
+<li>
+<p><strong>Duration</strong> : fairly symmetrical (between -0.5 and 0.5, 0=symmetrical) and platykurtic (below 3), which is also negative so less pointy (slightly flatter) than the normal distribution</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1108,19 +1143,16 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Sales :"</span><span class="p">)</span>
 <span class="c1"># Skewness</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"skewness : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Sales'</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">())</span> <span class="c1"># 12.98 : (highly) positive skew (tail longer toward the right)</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s2">"skewness : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Sales'</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">())</span>
 <span class="c1"># Kurtosis</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"kurtosis : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Sales'</span><span class="p">]</span><span class="o">.</span><span class="n">kurt</span><span class="p">())</span> <span class="c1"># 304.44 : leptokurtic (because, &gt; 3), pointy</span>
-<span class="c1"># =&gt; indicator that data has heavy outliers</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"kurtosis : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Sales'</span><span class="p">]</span><span class="o">.</span><span class="n">kurt</span><span class="p">())</span>
 
 <span class="n">df</span><span class="p">[</span><span class="s2">"Duration"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Ship Date"</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'</span><span class="si">%d</span><span class="s1">/%m/%Y'</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Order Date"</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'</span><span class="si">%d</span><span class="s1">/%m/%Y'</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'timedelta64[h]'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span> <span class="o">/</span> <span class="mi">24</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Shipping duration :"</span><span class="p">)</span>
 <span class="c1"># Skewness</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"skewness : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Duration'</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">())</span> <span class="c1"># -0.42 : fairly symmetrical (if between -0.5 and 0.5, 0=symmetrical)</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s2">"skewness : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Duration'</span><span class="p">]</span><span class="o">.</span><span class="n">skew</span><span class="p">())</span>
 <span class="c1"># Kurtosis</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"kurtosis : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Duration'</span><span class="p">]</span><span class="o">.</span><span class="n">kurt</span><span class="p">())</span> <span class="c1"># -0.28 : platykurtic (&lt;3), negative =&gt; less pointy (slightly flatter) than the normal distribution</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"kurtosis : "</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Duration'</span><span class="p">]</span><span class="o">.</span><span class="n">kurt</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -1153,8 +1185,8 @@ kurtosis :  -0.280888535513812
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Montly-Sales">
-<a class="anchor" href="#Montly-Sales" aria-hidden="true"><span class="octicon octicon-link"></span></a>Montly Sales<a class="anchor-link" href="#Montly-Sales"> </a>
+<h2 id="Monthly-Sales">
+<a class="anchor" href="#Monthly-Sales" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monthly Sales<a class="anchor-link" href="#Monthly-Sales"> </a>
 </h2>
 </div>
 </div>
@@ -1422,27 +1454,6 @@ Mean sale value : 231$
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">capture</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pyshp</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">cartopy</span><span class="o">==</span><span class="mf">0.19</span><span class="o">.</span><span class="mf">0.</span><span class="n">post1</span> <span class="c1"># why not the latest ... 0.20 ?</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">uninstall</span> <span class="o">-</span><span class="n">y</span> <span class="n">shapely</span> <span class="c1"># to prevent this error : https://stackoverflow.com/questions/60111684/geometry-must-be-a-point-or-linestring-error-using-cartopy</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">shapely</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">binary</span> <span class="n">shapely</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
