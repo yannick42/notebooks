@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://blog.yannick42.dev/eda/2022/04/22/Kaggle_Survey_2020.html</loc>
+<loc>https://notebooks.yannick42.dev/eda/2022/04/22/Kaggle_Survey_2020.html</loc>
 <lastmod>2022-04-22T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.yannick42.dev/eda/2022/04/22/Superstore_Sales_Dataset_(EDA).html</loc>
+<loc>https://notebooks.yannick42.dev/eda/2022/04/22/Superstore_Sales_Dataset_(EDA).html</loc>
 <lastmod>2022-04-22T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.yannick42.dev/eda/ml/2022/04/24/Titanic_dataset.html</loc>
+<loc>https://notebooks.yannick42.dev/eda/ml/2022/04/24/Titanic_dataset.html</loc>
 <lastmod>2022-04-24T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://blog.yannick42.dev/about/</loc>
+<loc>https://notebooks.yannick42.dev/about/</loc>
 </url>
 <url>
-<loc>https://blog.yannick42.dev/</loc>
+<loc>https://notebooks.yannick42.dev/</loc>
 </url>
 <url>
-<loc>https://blog.yannick42.dev/search/</loc>
+<loc>https://notebooks.yannick42.dev/search/</loc>
 </url>
 <url>
-<loc>https://blog.yannick42.dev/categories/</loc>
+<loc>https://notebooks.yannick42.dev/categories/</loc>
 </url>
 </urlset>

@@ -1,1 +1,1 @@
-Sitemap: https://blog.yannick42.dev/sitemap.xml
+Sitemap: https://notebooks.yannick42.dev/sitemap.xml
